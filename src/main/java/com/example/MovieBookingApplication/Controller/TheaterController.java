@@ -25,7 +25,6 @@ public class TheaterController {
     @GetMapping("/gettheaterbylocation")
     public ResponseEntity<List<Theater>> getTheaterByLocation(@RequestParam String location) {
         return ResponseEntity.ok(theaterService.getTheaterByLocation(location));
-
     }
 
     @PutMapping("/updatetheater/{id}")
@@ -40,6 +39,4 @@ public class TheaterController {
         theaterService.deleteTheater(id);
         return ResponseEntity.ok().build();
     }
-
-
 }

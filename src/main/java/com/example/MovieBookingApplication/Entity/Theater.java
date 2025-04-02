@@ -2,12 +2,11 @@ package com.example.MovieBookingApplication.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
-
 import java.util.List;
 
 @Entity
 @Data
+@Table(name = "theater")
 public class Theater {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

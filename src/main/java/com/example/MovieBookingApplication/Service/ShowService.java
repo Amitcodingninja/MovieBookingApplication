@@ -9,10 +9,12 @@ import com.example.MovieBookingApplication.Repository.MovieRepository;
 import com.example.MovieBookingApplication.Repository.ShowRepository;
 import com.example.MovieBookingApplication.Repository.TheaterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ShowService {
     @Autowired
     private ShowRepository showRepository;

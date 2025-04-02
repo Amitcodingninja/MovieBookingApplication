@@ -8,6 +8,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Table(name = "movie_shows")
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +23,9 @@ public class Show {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "thread_id", nullable = false)
     private Theater theater;
-    @OneToMany(mappedBy = "show", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Booking> bookings;
+
 
 
 }
